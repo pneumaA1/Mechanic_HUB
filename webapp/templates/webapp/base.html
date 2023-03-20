@@ -1,0 +1,288 @@
+{% load static %}
+
+<!--top bar area-->
+
+{% block top-bar-area %}
+    <section class="top-bar-area style-two">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
+                <div class="top-left">
+                    <ul class="top-contact-info">
+                        <li><span class="flaticon-phone-receiver"></span>Phone +44 567 890123</li>
+                        <li><span class="flaticon-envelope"></span>Mail@MechanicHub.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                <div class="top-right">
+                    <ul class="social-links pull-left">
+                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                        <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+                    </ul>
+                    <div class="appoinment-button pull-right">
+                        <a href="#">Make a Appoinment</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+<!-- main menu area-->
+{% block mainmenu %}
+   <section class="mainmenu-area stricky style-two">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 clearfix">
+                <!--Start logo-->
+                <div class="logo pull-left">
+                    <a href="{% url 'webapp:home' %}">
+                        <img src="../../static/webapp/mechanichub-pack/Html-File/images/resources/logo.png" alt="Awesome Logo">
+                    </a>
+                </div>
+                <!--End logo-->
+                <!--Start mainmenu-->
+                <nav class="main-menu pull-left">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                    </div>
+                    <div class="navbar-collapse collapse clearfix">
+                        <ul class="navigation clearfix">
+                            <li class="dropdown current"><a href="{% url 'webapp:home' %}">Home</a>
+                                <ul>
+                                    <li><a href="{% url 'webapp:home' %}">Home</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown"><a href="{% url 'webapp:about' %}">About us</a>
+                                <ul>
+                                    <li><a href="{% url 'webapp:about' %}">About Mechanichub</a></li>
+                                    <li><a href="{% url 'webapp:team' %}">Meet Our Experts</a></li>
+                                    <li><a href="{% url 'webapp:pricing' %}">Pricing Table</a></li>
+                                    <li><a href="{% url 'webapp:testimonials' %}">Customer Reviews</a></li>
+                                    <li><a href="{% url 'webapp:faq' %}">FAQ’s</a></li>
+                                    <li><a href="404.html">404 Page</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown"><a href="{% url 'webapp:services' %}">Services</a>
+                                <ul>
+                                    <li><a href="{% url 'webapp:services' %}">View All Services</a></li>
+                                    <li><a href="{% url 'webapp:wheel-works' %}">Wheel Works</a></li>
+                                    <li><a href="{% url 'webapp:painting-works' %}">Painting Works</a></li>
+                                    <li><a href="{% url 'webapp:air-conditioner' %}">Air Conditioner</a></li>
+                                    <li><a href="{% url 'webapp:water-service' %}">Water Service</a></li>
+                                    <li><a href="{% url 'webapp:engine-works' %}">Engine Works</a></li>
+                                    <li><a href="{% url 'webapp:oil-filters' %}">lube Oil & Filters</a></li>
+                                    <li><a href="{% url 'webapp:brake-repairs' %}">Brake Repairs</a></li>
+                                    <li><a href="{% url 'webapp:belts-hoses' %}">Belts & Hoses</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown"><a href="{% url 'webapp:gallery' %}">Gallery</a>
+                                <ul>
+                                    <li><a href="{% url 'webapp:gallery' %}">Fullwidth Gallery</a></li>
+                                    <li><a href="{% url 'webapp:gallery-single' %}">Gallery Single</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown"><a href="{% url 'webapp:blog-grid' %}">Blog</a>
+                                <ul>
+                                    <li><a href="{% url 'webapp:blog-grid' %}">Blog Grid Layout</a></li>
+                                    <li><a href="{% url 'webapp:blog-sb' %}">Blog With Sidebar</a></li>
+                                    <li><a href="{% url 'webapp:blog-single' %}">Blog Single Post</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown"><a href="{% url 'webapp:shop' %}">Shop</a>
+                                <ul>
+                                    <li><a href="{% url 'webapp:shop' %}">Shop Products</a></li>
+                                    <li><a href="{% url 'webapp:shop-single' %}">Products Single</a></li>
+                                    <li><a href="{% url 'webapp:shopping-cart' %}">Shopping Cart</a></li>
+                                    <li><a href="{% url 'webapp:checkout' %}">Checkout</a></li>
+                                    <li><a href="{% url 'webapp:account' %}">My Account</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="{% url 'webapp:contact' %}">Contact Us</a></li>
+                        </ul>
+                    </div>
+                </nav>
+                 <!--End mainmenu-->
+                <!--Start mainmenu right box-->
+                <div class="mainmenu-right-box pull-right">
+                    <div class="outer-search-box">
+                        <div class="seach-toggle"><i class="fa fa-search"></i></div>
+                        <ul class="search-box">
+                            <li>
+                                <form method="post" action="{% url 'webapp:home' %}">
+                                    <div class="form-group">
+                                        <input type="search" name="search" placeholder="Search Here" required>
+                                        <button type="submit"><i class="fa fa-search"></i></button>
+                                    </div>
+                                </form>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!--End mainmenu right box-->
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+<!-- footer area-->
+{% block footer %}
+<footer class="footer-area">
+    <div class="container">
+        <div class="row">
+            <!--Start single footer widget-->
+            <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                <div class="single-footer-widget martop-minus pd-bottom50">
+                    <div class="footer-logo">
+                        <a href="{% url 'webapp:home' %}">
+                            <img src="../../static/webapp/mechanichub-pack/Html-File/images/footer/footer-logo.png" alt="Awesome Footer Logo">
+                        </a>
+                    </div>
+                    <div class="our-info">
+                        <p>Mechanic HUB  was founded in 1998. Delivering the highest degree of customer satisfaction through superior workmanship and service. Car owners often lack visibility regarding the quality and price.</p>
+                        <a class="thm-btn" href="#">Get quote now</a>
+                    </div>
+
+                </div>
+            </div>
+            <!--End single footer widget-->
+            <!--Start single footer widget-->
+            <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                <div class="single-footer-widget pd-bottom50">
+                    <div class="title">
+                        <h3>Latest Blog Post</h3>
+                    </div>
+                    <ul class="latest-blog">
+                        <li>
+                            <div class="text-holder">
+                                <a href="#">Find latest news about our new and used car for easy to choose best one.</a>
+                                <span><i class="fa fa-clock-o" aria-hidden="true"></i>Aug 21, 2015</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="text-holder">
+                                <a href="#">Car kids grill the car experts, Esspecially intoduced for childrens.</a>
+                                <span><i class="fa fa-clock-o" aria-hidden="true"></i>July 17, 2015</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!--End single footer widget-->
+            <!--Start single footer widget-->
+            <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                <div class="single-footer-widget mar-bottom">
+                    <div class="title">
+                        <h3>Get In Contact</h3>
+                    </div>
+                    <ul class="footer-contact-info">
+                        <li>
+                            <div class="icon-holder">
+                                <span class="flaticon-maps-and-flags"></span>
+                            </div>
+                            <div class="text-holder">
+                                <h5>Rock St 12, Newyork City, USA</h5>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="icon-holder">
+                                <span class="flaticon-phone-receiver"></span>
+                            </div>
+                            <div class="text-holder">
+                                <h5>Phone +44 567 890123</h5>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="icon-holder">
+                                <span class="flaticon-envelope"></span>
+                            </div>
+                            <div class="text-holder">
+                                <h5>Mail@MechanicHub.com</h5>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="icon-holder">
+                                <span class="flaticon-fax"></span>
+                            </div>
+                            <div class="text-holder">
+                                <h5>(526) 326-985-7423</h5>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="map">
+                        <a href="#">Find Us On Map</a>
+                    </div>
+                </div>
+            </div>
+            <!--Start single footer widget-->
+            <!--Start single footer widget-->
+            <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                <div class="single-footer-widget clearfix">
+                    <div class="title">
+                        <h3>Working Hours</h3>
+                    </div>
+                    <ul class="working-hours">
+                        <li>Monday: <span>9:30 am - 6.00 pm</span></li>
+                        <li>Tuesday: <span>9:30 am - 6.00 pm</span></li>
+                        <li>Wednesday: <span>9:30 am - 6.00 pm</span></li>
+                        <li>Thursday: <span>9:30 am - 6.00 pm</span></li>
+                        <li>Friday: <span>9:30 am - 6.00 pm</span></li>
+                        <li>Saturday: <span>9:30 am - 6.00 pm</span></li>
+                        <li>Sunday: <span class="closed">Closed</span></li>
+                    </ul>
+                </div>
+            </div>
+            <!--End single footer widget-->
+        </div>
+    </div>
+</footer>
+{% endblock %}
+
+<!-- footer bottom area -->
+
+{% block footer_bottom %}
+<section class="footer-bottom-area">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+                <div class="copyright-text">
+                    <p>Copyright @ 2017 <a href="#">Steelthemes</a>, All Right Reserved</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <ul class="footer-social-links">
+                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                    <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+<!-- revolution slider js -->
+{% block slider %}
+<script src="../../static/webapp/mechanichub-pack/Html-File/assets/revolution/js/jquery.themepunch.tools.min.js"></script>
+<script src="../../static/webapp/mechanichub-pack/Html-File/assets/revolution/js/jquery.themepunch.revolution.min.js"></script>
+<script src="../../static/webapp/mechanichub-pack/Html-File/assets/revolution/js/extensions/revolution.extension.actions.min.js"></script>
+<script src="../../static/webapp/mechanichub-pack/Html-File/assets/revolution/js/extensions/revolution.extension.carousel.min.js"></script>
+<script src="../../static/webapp/mechanichub-pack/Html-File/assets/revolution/js/extensions/revolution.extension.kenburn.min.js"></script>
+<script src="../../static/webapp/mechanichub-pack/Html-File/assets/revolution/js/extensions/revolution.extension.layeranimation.min.js"></script>
+<script src="../../static/webapp/mechanichub-pack/Html-File/assets/revolution/js/extensions/revolution.extension.migration.min.js"></script>
+<script src="../../static/webapp/mechanichub-pack/Html-File/assets/revolution/js/extensions/revolution.extension.navigation.min.js"></script>
+<script src="../../static/webapp/mechanichub-pack/Html-File/assets/revolution/js/extensions/revolution.extension.parallax.min.js"></script>
+<script src="../../static/webapp/mechanichub-pack/Html-File/assets/revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
+<script src="../../static/webapp/mechanichub-pack/Html-File/assets/revolution/js/extensions/revolution.extension.video.min.js"></script>
+{% endblock %}
